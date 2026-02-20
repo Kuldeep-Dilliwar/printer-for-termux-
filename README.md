@@ -11,6 +11,16 @@ This document outlines a custom hardware-software pipeline to print to a host-ba
 
 ## Phase 1: The Hardware Bridge (Termux Native)
 
+update
+```
+pkg update -y && yes | pkg upgrade
+```
+
+install dependencies
+```
+pkg i termux-api clang
+```
+
 Construct the pure C socket-to-USB listener to bypass Android's restricted `/sys/` hardware tree. 
 
 **1. Generate the C Source Code:**
